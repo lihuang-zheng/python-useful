@@ -14,5 +14,8 @@ print("by " + response.json()[0]['a'])
 # force garbage collection for python
 gc.collect()
 
+# print out current day with time
+print("Today is: " + os.popen('date').read())
+
 # print out the memory usage of the current process in MB with MB at the end
 print("Memory usage: ", str(psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024) + " MB")
